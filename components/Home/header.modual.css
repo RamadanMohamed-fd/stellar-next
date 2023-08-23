@@ -1,0 +1,211 @@
+/* -------------Header------------------ */
+#logo svg {
+  animation: fill 0.5s ease forwards 3s;
+}
+#logo svg > path:nth-child(1) {
+  stroke-dasharray: 185.2080078125;
+  stroke-dashoffset: 185.2080078125;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: line-anim 3s ease forwards;
+}
+#logo path:nth-child(2) {
+  stroke-dasharray: 124.32966613769531;
+  stroke-dashoffset: 124.32966613769531;
+  animation: line-anim 3s ease forwards 0.3s;
+}
+#logo path:nth-child(3) {
+  stroke-dasharray: 176.3377227783203;
+  stroke-dashoffset: 176.3377227783203;
+  animation: line-anim 3s ease forwards 0.6s;
+}
+#logo path:nth-child(4) {
+  stroke-dasharray: 83.28404235839844;
+  stroke-dashoffset: 83.28404235839844;
+  animation: line-anim 3s ease forwards 0.9s;
+}
+#logo path:nth-child(5) {
+  stroke-dasharray: 83.28404235839844;
+  stroke-dashoffset: 83.28404235839844;
+  animation: line-anim 3s ease forwards 1.2s;
+}
+#logo path:nth-child(6) {
+  stroke-dasharray: 164.84778594970703;
+  stroke-dashoffset: 164.84778594970703;
+  animation: line-anim 3s ease forwards 1.5s;
+}
+#logo path:nth-child(7) {
+  stroke-dasharray: 89.44850158691406;
+  stroke-dashoffset: 89.44850158691406;
+  animation: line-anim 3s ease forwards 1.8s;
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+.triangle-up {
+  border-left: 10px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 20px solid #222;
+  border-top: 10px solid transparent;
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: -1px;
+}
+@media (max-width: 1024px) {
+  .triangle-up {
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid rgb(16, 16, 41);
+    border-top: 0px solid transparent;
+  }
+  .menu {
+    padding: 20px 0px;
+  }
+  .menu > li p {
+    padding: 10px 20px;
+  }
+  .border-h::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 89.8%;
+    top: 3px;
+    @apply bg-gray-500;
+    left: 0;
+  }
+  .border-h::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 89.8%;
+    top: 3px;
+    @apply bg-gray-500;
+    right: 0;
+  }
+}
+@media (max-width: 640px) {
+  .menu > li p {
+    padding: 8px 15px;
+  }
+  .border-h::after {
+    height: 92.8%;
+  }
+  .border-h::before {
+    height: 92.8%;
+  }
+}
+.triangle-up1 {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 10px solid rgb(4, 1, 24);
+  border-top: 12px solid transparent;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 3px;
+}
+.service-list {
+  @apply p-2  duration-300 relative z-50 flex justify-start items-center;
+}
+.service-list span {
+  width: 0px;
+  height: 1px;
+  background: white;
+  transition: 0.3s;
+  margin-right: 4px;
+}
+.service-list:hover span {
+  width: 15px;
+}
+.service-list:hover {
+  @apply text-yellow-500;
+}
+.menu > li p {
+  transition: 0.3s;
+}
+.menu > li:hover p {
+  @apply text-yellow-500;
+}
+
+.bar {
+  /* display: block; */
+  height: 40px !important;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.3s;
+  /* background-image: linear-gradient(to right, #e91e63, #f44336); */
+  border-radius: 5px;
+  cursor: pointer;
+  width: 45px;
+  transform: skew(-13deg);
+}
+.bar div {
+  position: relative;
+  width: 37px;
+  margin: auto;
+  height: 35px;
+  padding: 5px;
+}
+.bar span {
+  background-color: #fff;
+  width: 90%;
+  margin: auto;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s, width 0.5s;
+}
+.bar .line-1 {
+  transform: translate(-50%, -12px);
+}
+.bar .line-3 {
+  transform: translate(-50%, 8px);
+}
+.open-menu .line-1 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.open-menu .line-3 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.open-menu .line-2 {
+  width: 0;
+}
+.movup {
+  transition: 0.5s ease-in;
+  height: 0;
+  overflow: hidden;
+}
+.head-li:hover .movup {
+  height: 300px;
+}
+
+@media (max-width: 316px) {
+  .head-li > div {
+    left: 0%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 250px) {
+  .menu > li p {
+    padding: 5px 10px;
+  }
+  .head-li > div {
+    left: -100%;
+  }
+}

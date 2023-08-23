@@ -1,0 +1,7 @@
+.footer-header {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  letter-spacing: 0px;
+  text-shadow: 0 0 20 yellow;
+  position: relative;
+}
