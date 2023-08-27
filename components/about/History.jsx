@@ -120,6 +120,7 @@ const Values = () => {
                 <div className=" relative  w-20 h-20">
                   <Image
                     src={image}
+                    alt="history"
                     loading="lazy"
                     placeholder="blur"
                     objectFit="cover"
@@ -157,6 +158,7 @@ const Values = () => {
                 <div className=" relative  w-20 h-20">
                   <Image
                     src={image}
+                    alt="history"
                     loading="lazy"
                     placeholder="blur"
                     objectFit="cover"
@@ -194,6 +196,7 @@ const Values = () => {
                 <div className=" relative  w-20 h-20">
                   <Image
                     src={image}
+                    alt="history"
                     loading="lazy"
                     placeholder="blur"
                     objectFit="cover"

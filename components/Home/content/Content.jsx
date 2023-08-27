@@ -64,6 +64,9 @@ const Content = () => {
                   src={data[1].image}
                   width={"200"}
                   height={"100"}
+                  loading="lazy"
+                  placeholder="blur"
+                  alt="content"
                   className="  rounded-sm  w-[200px] h-[70px] "
                 />
                 <div className="my-4">

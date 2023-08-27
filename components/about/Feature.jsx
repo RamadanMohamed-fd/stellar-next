@@ -57,6 +57,7 @@ const Feature = () => {
                   width={"70"}
                   height={"70"}
                   placeholder="blur"
+                  loading="lazy"
                   className=""
                 />
               </div>
