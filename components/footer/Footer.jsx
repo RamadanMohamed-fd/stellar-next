@@ -14,57 +14,89 @@ const Footer = () => {
   const d = new Date();
   let year = d.getFullYear();
   return (
-    <div className="relative z-20 w-full flexCenter flex-col text-white ">
-      <div className="w-full flexCenter flex-col">
-        <div className="flexCenter">
-          <h2 className="footer-header text-9xl max-lg:text-5xl">{head}</h2>
-          <FaRegHandPointer className=" hand rotate-180 mx-4 text-6xl mt-6" />
+    <div className="relative z-10 w-full flexCenter flex-col text-white ">
+      <div className="w-full flexCenter flex justify-center items-center max-sm:justify-start flex-col">
+        <div
+          data-aos="fade-up"
+          className="flex justify-center items-center max-sm:justify-start  max-[800px]:mt-28 "
+        >
+          <h2 className="footer-header text-9xl max-sm:ml-3  max-lg:text-6xl ">
+            {head}
+          </h2>
+          <FaRegHandPointer className=" hand max-sm:hidden  rotate-180 mx-4 max-sm:mx-0 text-6xl mt-6 max-sm:text-5xl" />
         </div>
-        <div className="flexBetween  w-[300px] my-10">
-          <span className="w-14 h-14 flexCenter text-4xl cursor-pointer  rounded-full hover:border-2  ">
+        <div className="flexBetween  w-[300px] max-sm:w-[250px] my-10">
+          <span
+            data-aos="fade-right"
+            className="w-14 h-14 flexCenter text-3xl cursor-pointer  rounded-full hover:border-2  "
+          >
             <FaFacebookF />
           </span>
-          <span className="w-14 h-14 flexCenter text-4xl cursor-pointer  rounded-full hover:border-2  ">
+          <span
+            data-aos="fade-down"
+            className="w-14 h-14 flexCenter text-3xl cursor-pointer  rounded-full hover:border-2  "
+          >
             <FaTwitter />
           </span>
-          <span className="w-14 h-14 flexCenter text-4xl cursor-pointer  rounded-full hover:border-2 ">
+          <span
+            data-aos="fade-up"
+            className="w-14 h-14 flexCenter text-3xl cursor-pointer  rounded-full hover:border-2 "
+          >
             <FaLinkedinIn />
           </span>
-          <span className="w-14 h-14 text-4xl cursor-pointer  flexCenter  rounded-full hover:border-2  ">
+          <span
+            data-aos="fade-left"
+            className="w-14 h-14  cursor-pointer text-3xl  flexCenter  rounded-full hover:border-2  "
+          >
             <FaInstagram />
           </span>
         </div>
       </div>
-      <div className=" flex justify-between items-start w-[75%]  mb-10">
-        <div className="w-1/3 flex justify-center">
+      <div className=" flex justify-between items-start flex-wrap w-[75%] max-xl:w-[90%] max-sm:w-[99%]  mb-10">
+        <div className="mx-3 max-sm:mr-4 mt-8  flex justify-center">
           <div>
-            <h2 className="text-4xl">Address</h2>
-            <p className="mt-2 text-xl flexCenter">
+            <h2 data-aos="fade-down-right" className="text-4xl max-sm:text-3xl">
+              Address
+            </h2>
+            <p
+              data-aos="fade-right"
+              className="mt-2 text-xl max-sm:text-lg flexCenter"
+            >
               Level 22, Tornado Tower, Doha - Qatar
             </p>
           </div>
         </div>
-        <div className="w-1/3 flex justify-end ">
+        <div className="mx-3 max-sm:mr-4 mt-8 flex justify-end ">
           <div>
-            <h2 className="text-4xl">Say Hello</h2>
-            <p className="mt-2 text-xl tracking-wide">
+            <h2 data-aos="fade-down" className="text-4xl max-sm:text-3xl">
+              Say Hello
+            </h2>
+            <p
+              data-aos="fade-up"
+              className="mt-2 text-xl max-sm:text-lg tracking-wide"
+            >
               info@stellarofqatar.com
             </p>
-            <p className="mt-2 text-2xl">00974 77757916</p>
+            <p data-aos="fade-left" className="mt-2  max-sm:text-xl text-2xl">
+              00974 77757916
+            </p>
           </div>
         </div>
-        <div className="w-1/3 flex justify-end ">
+        <div className="mx-3 max-sm:mr-4 mt-8 flex justify-end ">
           <div>
-            <h2 className="text-4xl mb-2">Newsletter</h2>
+            <h2 data-aos="fade-down-left" className="text-4xl max-sm:text-3xl">
+              Newsletter
+            </h2>
             <input
+              data-aos="fade-left"
               type="text"
               placeholder="Type Your Email"
-              className=" bg-transparent border-b-[1px] border-[#aaa] text-lg px-1 py-2 text-white"
+              className=" bg-transparent border-b-[1px] border-[#aaa] text-lg px-1 py-2 mt-2  max-sm:text-md text-white"
             />
           </div>
         </div>
       </div>
-      <div className="w-[75%] text-right pt-2 mb-16 m-auto border-t-[1px] border-[#aaa]">
+      <div className="w-[75%] max-xl:w-[90%] text-right pt-2 mb-16 m-auto border-t-[1px] border-[#aaa]">
         <p>© {year} Steller</p>
       </div>
     </div>

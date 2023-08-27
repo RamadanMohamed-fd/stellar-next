@@ -4,6 +4,8 @@ import { Inter, Rubik } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 const rubik = Rubik({
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
   variable: "--font-rubik",
   weight: ["300", "400", "800"],
 });

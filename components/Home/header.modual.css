@@ -70,6 +70,12 @@
     border-bottom: 0px solid rgb(16, 16, 41);
     border-top: 0px solid transparent;
   }
+  .li-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
   .menu {
     padding: 20px 0px;
   }
@@ -119,17 +125,23 @@
 .service-list {
   @apply p-2  duration-300 relative z-50 flex justify-start items-center;
 }
-.service-list span {
+.service-list1 {
+  @apply py-1 duration-300 relative z-50 flex justify-start items-center cursor-pointer;
+}
+.service-list span,
+.service-list1 span {
   width: 0px;
   height: 1px;
   background: white;
   transition: 0.3s;
   margin-right: 4px;
 }
-.service-list:hover span {
+.service-list:hover span,
+.service-list1:hover span {
   width: 15px;
 }
-.service-list:hover {
+.service-list:hover,
+.service-list1:hover {
   @apply text-yellow-500;
 }
 .menu > li p {

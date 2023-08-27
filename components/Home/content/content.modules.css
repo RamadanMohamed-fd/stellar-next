@@ -1,9 +1,10 @@
 .header {
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-width: 3px;
   letter-spacing: 2px;
-  text-shadow: 0 0 20 yellow;
+  /* text-shadow: 0 0 40px yellow; */
   position: relative;
+  line-height: 140px;
 }
 .header::after {
   content: attr(data-text);
@@ -11,7 +12,7 @@
   top: 0;
   left: 0;
   color: rgb(255, 255, 0);
-  filter: blur(20px);
+  filter: blur(10px);
   z-index: -1;
 }
 .header::before {
@@ -22,7 +23,7 @@
   width: 100%;
   height: 100%;
   background: rgb(255, 255, 0);
-  opacity: 0.2;
+  opacity: 0.3;
   filter: blur(80px);
   z-index: -2;
 }
@@ -94,6 +95,12 @@
   }
 }
 @media (max-width: 380px) {
+  .header {
+    @apply text-6xl;
+  }
+  .sup {
+    @apply text-lg px-20;
+  }
   .main-cart1::before {
     right: -20px;
     bottom: -20px;
@@ -116,8 +123,15 @@
   }
 }
 .btn {
-  @apply max-[350px]:mb-2 max-[350px]:skew-x-0 bg-yellow-500 px-5 max-lg:px-3 -skew-x-12 py-2 duration-300 hover:bg-yellow-600 hover:text-white;
+  @apply bg-yellow-500 px-5 max-lg:px-3 -skew-x-12
+   py-2 duration-300 hover:bg-yellow-600 hover:text-white;
 }
+@media (max-width: 350px) {
+  .btn {
+    @apply mb-2 skew-x-0;
+  }
+}
+
 /* @media (max-width: 350px) {
   .main-cart1,
   .main-cart2 {

@@ -13,20 +13,21 @@ import { LiaHandsHelpingSolid, LiaPhoneVolumeSolid } from "react-icons/lia";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <div className="  text-white h-[130px]  flexCenter  m-auto w-full   lg:uppercase font-semibold capitalize text-xs max-lg:text-base max-sm:text-sm  max-lg:font-normal  ">
-      <nav className="w-[95%] max-sm:w-[99%]  m-auto relative  z-40  ">
+    <div className="  text-white h-[130px] max-sm:overflow-hidden   flexCenter  m-auto w-full   lg:uppercase font-semibold capitalize text-xs max-lg:text-base max-sm:text-sm  max-lg:font-normal  ">
+      <nav className="w-[95%] max-sm:w-[100%]  m-auto relative  z-40  ">
         <ul className="flexBetween ">
           <li
-            className={` lg:italic w-[40%] max-lg:fixed max-lg:bottom-0 max-lg:w-full max-lg:left-0  duration-300  ${
+            data-aos="fade-down-right"
+            className={` lg:italic li-menu w-[40%] duration-300   ${
               openMenu ? "max-lg:scale-100" : "max-lg:scale-0"
             }`}
           >
             <ul
-              className=" flex menu justify-evenly flex-wrap items-center
+              className=" flex menu justify-evenly  flex-wrap items-center
               max-lg:bg-[#222] max-lg:bottom-0 max-lg:border-2 max-lg:border-b-0 max-lg:border-gray-500  rounded-t-2xl  "
             >
               <li className="max-lg:py-2 ">
-                <Link href="">
+                <Link href="/about">
                   <p className="flexCenter ">
                     <BiDonateHeart className=" ml-1 lg:hidden " />
                     About
@@ -115,7 +116,10 @@ const Header = () => {
               </li>
             </ul>
           </li>
-          <li className="w-[20%] mr-10 max-sm:mr-0 max-sm:w-fit flexCenter  ">
+          <li
+            data-aos="zoom-out-up"
+            className="w-[20%] mr-10 max-sm:ml-2 max-sm:w-32  flexCenter  "
+          >
             <h1 id="logo">
               <svg
                 width="177"
@@ -169,7 +173,10 @@ const Header = () => {
               </svg>
             </h1>
           </li>
-          <li className="w-[35%]  max-lg:w-[80%] max-sm:w-fit">
+          <li
+            data-aos="fade-down-left"
+            className="w-[35%]  max-lg:w-[80%] max-sm:w-fit mr-3 "
+          >
             <ul className="flex  justify-start  max-lg:justify-end   items-center  text-black">
               <li className="w-fit  max-lg:w-72 max-sm:hidden">
                 <ul className=" flex justify-end  text-sm max-sm:flex-col">
@@ -206,7 +213,7 @@ const Header = () => {
                   </ul>
                 </div>
               </li>
-              <li className="lg:hidden max-lg:w-fit mt-1">
+              <li className="lg:hidden max-lg:w-fit mt-1 ">
                 <div className="bar " onClick={() => setOpenMenu(!openMenu)}>
                   <div className={`${openMenu ? "open-menu" : ""}`}>
                     <span className="line-1"></span>
