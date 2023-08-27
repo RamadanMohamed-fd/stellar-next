@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/Home/Header";
-import Title from "@/components/about/title";
+import Title from "@/components/about/Title";
 import AboutHead from "@/components/about/AboutHead";
 import Story from "@/components/about/Story";
 import Feature from "@/components/about/Feature";
