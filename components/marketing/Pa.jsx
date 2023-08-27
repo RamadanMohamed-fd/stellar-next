@@ -1,17 +1,12 @@
 import React from "react";
 import { CiRoute } from "react-icons/ci";
+const m =
+  "     Marketing consulting is a service provided by professionals or firms that specialize in helping businesses improve their marketing strategies, campaigns, and overall marketing efforts. The primary goal of marketing consulting is to enhance a company's marketing performance, reach target audiences more effectively, and achieve business objectives.";
 const Pa = () => {
   return (
     <div className=" w-[90%] mb-10  m-auto -mt-6 flex flex-col justify-center items-center relative z-20 text-white">
       <div data-aos="zoom-out-up" className="w-7/12  text-lg ">
-        <p>
-          Marketing consulting is a service provided by professionals or firms
-          that specialize in helping businesses improve their marketing
-          strategies, campaigns, and overall marketing efforts. The primary goal
-          of marketing consulting is to enhance a company's marketing
-          performance, reach target audiences more effectively, and achieve
-          business objectives.
-        </p>
+        <p>{m}</p>
       </div>
       <div className=" flex justify-between mt-5  w-7/12 ">
         <div data-aos="fade-right" className="text-center">

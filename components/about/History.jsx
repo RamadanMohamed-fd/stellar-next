@@ -15,6 +15,8 @@ import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import image from "../../public/about/h1.jpg";
 import { AiFillStar } from "react-icons/ai";
+
+const m = "Things go wrong have questions. We’ve understand. So we have people";
 const Values = () => {
   const [counterOn, setCounterOn] = useState(false);
   return (
@@ -51,8 +53,7 @@ const Values = () => {
               data-aos="fade-up-right"
               className=" text-xl max-xl:text-lg max-sm:text-base w-[85%] max-xl:w-full my-3 "
             >
-              Things go wrong have questions. We’ve understand. So we have
-              people
+              {m}
             </p>
           </div>
           <div className="w-[90%] max-xl:w-full flexBetween flex-wrap">

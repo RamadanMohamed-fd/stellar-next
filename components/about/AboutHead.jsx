@@ -1,5 +1,5 @@
 import React from "react";
-
+const m = "We're";
 const AboutHead = () => {
   return (
     <div className="w-[85%] max-sm:w-[90%] m-auto -mt-24 max-lg:-mt-2 text-white">
@@ -14,7 +14,7 @@ const AboutHead = () => {
           data-aos="fade-up-right"
           className=" font-bold text-5xl max-sm:text-4xl w-[580px] max-sm:w-fit my-3 "
         >
-          <span className="title1 font-bold">We're</span> a digital agency based
+          <span className="title1 font-bold">{m}</span> a digital agency based
           in Valencia.
         </p>
         <div className="w-full flexCenter">

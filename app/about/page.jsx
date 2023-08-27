@@ -11,7 +11,7 @@ import History from "@/components/about/History";
 import Create from "@/components/about/Create";
 import AOS from "aos";
 import "aos/dist/aos.css";
-const page = () => {
+const Page = () => {
   useEffect(() => {
     AOS.init({
       offset: 120,
@@ -34,4 +34,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
