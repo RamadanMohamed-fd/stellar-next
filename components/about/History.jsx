@@ -17,6 +17,7 @@ import image from "../../public/about/h1.jpg";
 import { AiFillStar } from "react-icons/ai";
 
 const m = "Things go wrong have questions. We’ve understand. So we have people";
+const m2 = "We've";
 const Values = () => {
   const [counterOn, setCounterOn] = useState(false);
   return (
@@ -45,7 +46,7 @@ const Values = () => {
             </p>
             <p data-aos="fade-up-right" className=" text-5xl max-sm:text-3xl">
               <span className="title1 text-6xl max-xl:text-5xl max-sm:text-4xl font-bold">
-                We've
+                {m2}
               </span>{" "}
               got your back.
             </p>
