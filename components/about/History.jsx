@@ -102,7 +102,7 @@ const Values = () => {
         >
           <SwiperSlide className="  py-5">
             {" "}
-            <div className="bg-[#222] w-full m-auto h-[460px] max-lg:min-h-[490px] max-[955px]:min-h-[430px]  max-[955px]:p-10 p-10 max-lg:p-6 max-[380px]:px-4 max-sm:h-fit  rounded-3xl">
+            <div className="bg-black border-2 border-slate-800 w-full m-auto h-[460px] max-lg:min-h-[490px] max-[955px]:min-h-[430px]  max-[955px]:p-10 p-10 max-lg:p-6 max-[380px]:px-4 max-sm:h-fit  rounded-3xl">
               <div className="flex my-4 text-2xl max-sm:text-xl text-yellow-600">
                 <AiFillStar />
                 <AiFillStar />
@@ -140,7 +140,7 @@ const Values = () => {
           </SwiperSlide>
           <SwiperSlide className="  py-5">
             {" "}
-            <div className="bg-[#222] w-full m-auto h-[460px] max-lg:min-h-[490px] max-[955px]:min-h-[430px]  max-[955px]:p-10 p-10 max-lg:p-6 max-[380px]:px-4 max-sm:h-fit  rounded-3xl">
+            <div className="bg-black border-2 border-slate-800 w-full m-auto h-[460px] max-lg:min-h-[490px] max-[955px]:min-h-[430px]  max-[955px]:p-10 p-10 max-lg:p-6 max-[380px]:px-4 max-sm:h-fit  rounded-3xl">
               <div className="flex my-4 text-2xl max-sm:text-xl text-yellow-600">
                 <AiFillStar />
                 <AiFillStar />
@@ -178,7 +178,7 @@ const Values = () => {
           </SwiperSlide>
           <SwiperSlide className="  py-5">
             {" "}
-            <div className="bg-[#222] w-full m-auto h-[460px] max-lg:min-h-[490px] max-[955px]:min-h-[430px]  max-[955px]:p-10 p-10 max-lg:p-6 max-[380px]:px-4 max-sm:h-fit  rounded-3xl">
+            <div className="bg-black border-2 border-slate-800 w-full m-auto h-[460px] max-lg:min-h-[490px] max-[955px]:min-h-[430px]  max-[955px]:p-10 p-10 max-lg:p-6 max-[380px]:px-4 max-sm:h-fit  rounded-3xl">
               <div className="flex my-4 text-2xl max-sm:text-xl text-yellow-600">
                 <AiFillStar />
                 <AiFillStar />

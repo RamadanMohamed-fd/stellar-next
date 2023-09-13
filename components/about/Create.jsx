@@ -21,12 +21,12 @@ const Create = () => {
           <span className="text-5xl  title1  font-bold "> reality</span>.
         </p>
       </div>
-      <div className="flexCenter flex-wrap  w-full my-16 max-sm:my-10">
+      <div className="flexCenter flex-wrap duration-500  w-full my-16 max-sm:my-10">
         {images.map((ele, index) => (
           <div
             data-aos="flip-right"
-            key={index}
-            className="w-[320px] max-xl:w-[250px] flexCenter  m-8 max-sm:m-4 h-[200px] max-xl:h-[150px] cursor-pointer group relative border-2 px-6 py-5 hover:rounded-tl-sm hover:rounded-br-sm duration-300 rounded-2xl"
+            key={index * 1.34}
+            className="w-[320px] max-xl:w-[250px] flexCenter  m-8 max-sm:m-4 h-[200px] max-xl:h-[150px] cursor-pointer group relative border-2 px-6 py-5 hover:rounded-tl-sm hover:rounded-br-sm duration-500 rounded-2xl"
           >
             <Image
               src={ele}
@@ -36,7 +36,7 @@ const Create = () => {
               objectFit="cover"
               width={"160"}
               height={"100"}
-              className=" group-hover:scale-[1.3] duration-300 max-xl:p-4 "
+              className=" group-hover:scale-[1.3] duration-500 max-xl:p-4 "
             />
           </div>
         ))}

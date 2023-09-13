@@ -2,7 +2,7 @@ import React from "react";
 const m = "We're";
 const AboutHead = () => {
   return (
-    <div className="w-[85%] max-sm:w-[90%] m-auto -mt-24 max-lg:-mt-2 text-white">
+    <div className="w-[85%] relative max-sm:w-[90%] m-auto -mt-32 max-lg:-mt-2 text-white">
       <div className=" mt-16 ">
         <h1
           data-aos="fade-left"

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import "./footer.modules.css";
 import {
   FaRegHandPointer,
@@ -7,18 +8,24 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
-import { LiaAddressBookSolid } from "react-icons/lia";
+
 import { data } from "autoprefixer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const head = "Let's Discuss";
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   const d = new Date();
   let year = d.getFullYear();
   return (
-    <div className="relative z-10 w-full flexCenter flex-col text-white ">
+    <div className="relative z-[8] w-full flexCenter flex-col text-white ">
       <div className="w-full flexCenter flex justify-center items-center max-sm:justify-start flex-col">
         <div
           data-aos="fade-up"
-          className="flex justify-center items-center max-sm:justify-start  max-[800px]:mt-28 "
+          className="flex justify-center items-center max-sm:justify-start  max-mdd:mt-28 "
         >
           <h2 className="footer-header text-9xl max-sm:ml-3  max-lg:text-6xl ">
             {head}

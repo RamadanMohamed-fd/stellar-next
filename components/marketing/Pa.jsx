@@ -5,9 +5,6 @@ const m =
 const Pa = () => {
   return (
     <div className=" w-[90%] mb-10  m-auto -mt-6 flex flex-col justify-center items-center relative z-20 text-white">
-      <div data-aos="zoom-out-up" className="w-7/12  text-lg ">
-        <p>{m}</p>
-      </div>
       <div className=" flex justify-between mt-5  w-7/12 ">
         <div data-aos="fade-right" className="text-center">
           <ol>

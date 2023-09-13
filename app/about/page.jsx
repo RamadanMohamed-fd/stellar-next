@@ -20,16 +20,14 @@ const Page = () => {
     });
   }, []);
   return (
-    <div className=" relative z-20 max-w-[1500px] m-auto">
-      <Header />
-      <Title title="About Us" style="w-[350px]" />
+    <div className=" relative z-10 max-w-[1500px] m-auto">
+      <Title title="About Us" />
       <AboutHead />
       <Story />
       <Feature />
       <Values />
       <History />
       <Create />
-      <Footer />
     </div>
   );
 };

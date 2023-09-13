@@ -47,17 +47,16 @@ const Feature = () => {
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
             key={index}
-            className="mt-24 mx-4 max-sm:mx-0 flex flex-col justify-center border-2 border-t-0  rounded-md px-10 max-[400px]:px-5  w-[350px] max-[910px]:w-[500px] max-sm:w-[350px] max-[400px]:w-[260px]"
+            className="mt-24 mx-4 max-sm:mx-0 flex flex-col justify-center border-2 border-t-0  rounded-md px-10 max-[400px]:px-5  w-[350px] max-mdd:w-[500px] max-sm:w-[350px] max-[400px]:w-[260px]"
           >
             <div className="h-[120px]  w-full  flex items-start  ">
               <div className="w-[160px]  flex justify-center items-start  m-auto icon h-[100px]  border-2 border-t-0 z-10 bg-transparent ">
                 <Image
                   src={ele}
-                  atl="Feature"
+                  alt={`Feature-${index}`}
                   width={"70"}
                   height={"70"}
                   placeholder="blur"
-                  loading="lazy"
                   className=""
                 />
               </div>

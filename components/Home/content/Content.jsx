@@ -1,24 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./content.modules.css";
 import { data } from "../content/ContentData";
 import Image from "next/image";
 import { GiSpiralArrow } from "react-icons/gi";
 import Link from "next/link";
+import PopUp from "./PopUp";
 const Content = () => {
+  const [open, setOpen] = useState(false);
+  const [open1, setOpen1] = useState(false);
+  const closePopUp1 = () => {
+    setOpen1(false);
+  };
+  const closePopUp = () => {
+    setOpen(false);
+  };
   return (
     <div className="relative z-10 overflow-hidden text-white w-[100%] m-auto ">
-      <div className="w-full text-center flexCenter flex-col italic mt-28 mb-16 ">
+      <div className="w-full text-center flexCenter flex-col italic mt-24 mb-16 ">
         {" "}
         <h1
           data-aos="zoom-out-down"
           data-text="Stellar"
-          className="header text-[10rem] font-bold title1 font-serif  max-sm:text-8xl  text-white"
+          className="header  text-[10rem] font-bold   max-sm:text-8xl  text-white"
         >
           Stellar
         </h1>
         <p
           data-aos="zoom-out-up"
-          className=" text-3xl max-sm:text-xl sup max-sm:px-8 font-semibold w-96 mt-2 "
+          className=" text-3xl max-sm:text-xl sup max-sm:px-8 font-semibold w-[25rem] mt-2 "
         >
           SPECIALISING IN Scale Model Making, Digital Media Marketing
         </p>
@@ -51,7 +60,9 @@ const Content = () => {
                   </p>
                 </div>
                 <div className=" w-full flex justify-evenly group max-[350px]:flex-col  items-center text-[#222]  ">
-                  <button className="  btn ">know More</button>
+                  <button className="  btn " onClick={() => setOpen(!open)}>
+                    know More
+                  </button>
                   <button className="  btn">Visit Website</button>
                 </div>
               </div>
@@ -64,8 +75,8 @@ const Content = () => {
                   src={data[1].image}
                   width={"200"}
                   height={"100"}
-                  loading="lazy"
-                  placeholder="blur"
+                  // loading="lazy"
+                  // placeholder="blur"
                   alt="content"
                   className="  rounded-sm  w-[200px] h-[70px] "
                 />
@@ -76,7 +87,9 @@ const Content = () => {
                   <p className="  font-thin text-center">{data[1].mainSup}</p>
                 </div>
                 <div className=" w-full flex justify-evenly  items-center max-[350px]:flex-col  text-[#222]  ">
-                  <button className="btn ">know More</button>
+                  <button className="btn " onClick={() => setOpen1(!open1)}>
+                    know More
+                  </button>
                   <button className="btn ">Visit Website</button>
                 </div>
               </div>
@@ -84,6 +97,8 @@ const Content = () => {
           </div>
         </div>
       </div>
+      <PopUp data={data[0]} click={open} close={closePopUp} />
+      <PopUp data={data[1]} click={open1} close={closePopUp1} />
     </div>
   );
 };

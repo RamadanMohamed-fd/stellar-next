@@ -1,29 +1,38 @@
 import React from "react";
 import Image from "next/image";
-import image1 from "../../public/marketing/2.jpg";
-import image2 from "../../public/marketing/3.jpg";
-import image3 from "../../public/marketing/4.jpg";
-import image4 from "../../public/marketing/5.jpg";
-const images = [image1, image2, image3];
-const Im = () => {
+
+const Im = ({ data }) => {
   return (
-    <div className=" w-[85%] my-5 m-auto text-white relative z-20  ">
-      <div className="flexBetween">
-        {images.map((ele, index) => (
-          <div
-            data-aos="flip-right"
-            key={index}
-            className="w-[350px] h-[250px] rounded-xl  overflow-hidden"
-          >
-            <Image
-              src={ele}
-              atl="Feature"
-              objectFill="cover"
-              placeholder="blur"
-              className="h-full w-full rounded-xl hover:scale-110 duration-500 hover:filter hover:grayscale "
-            />
-          </div>
-        ))}
+    <div className=" w-full max-md:absolute bottom-10   right-0  flexCenter h-full max-md:h-fit mt-0">
+      <div className="w-[400px] relative h-[320px] max-xs:h-[250px]  max-xs:w-[250px] ">
+        <div
+          data-aos="fade-down-right"
+          className="  w-72 h-72 max-xs:w-52 max-xs:h-52 absolute left-0 top-0 border-4 border-white overflow-hidden cursor-pointer"
+        >
+          <Image
+            src={data[0]}
+            alt="propsal"
+            loading="lazy"
+            placeholder="blur"
+            fill
+            sizes="h-full w-full"
+            className=" hover:scale-110 duration-500 object-cover"
+          />
+        </div>
+        <div
+          data-aos="fade-down-left"
+          className="  w-44 h-44 max-md:w-36 max-md:h-36 max-xs:w-32 max-xs:h-32 absolute bottom-0 right-0 border-4 border-black flexCenter overflow-hidden cursor-pointer"
+        >
+          <Image
+            src={data[1]}
+            alt="propsal"
+            loading="lazy"
+            placeholder="blur"
+            fill
+            sizes="h-full w-full"
+            className=" hover:scale-110 duration-500  object-cover"
+          />
+        </div>
       </div>
     </div>
   );

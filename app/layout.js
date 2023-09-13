@@ -1,5 +1,7 @@
+import Header from "@/components/Home/Header";
 import "./globals.css";
 import { Inter, Rubik } from "next/font/google";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const rubik = Rubik({
@@ -18,7 +20,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={rubik.className}>{children}</body>
+      <body className={rubik.className}>
+        <main className="max-w-[1500px] overflow-x-hidden m-auto relative h-fit">
+          <Header />
+          {children}
+          <Footer />
+        </main>
+      </body>
     </html>
   );
 }

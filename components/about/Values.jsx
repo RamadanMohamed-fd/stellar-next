@@ -10,11 +10,12 @@ const Values = () => {
   const [element3, setElement3] = useState(false);
   return (
     <div className="w-[85%] max-xl:w-[93%]  mb-20 max-lg:-mt-10 flex justify-between items-start max-lg:items-center max-lg:flex-col m-auto text-white">
-      <div className="w-[430px] max-[450px]:w-[270px] m-auto  relative h-[450px] max-[450px]:h-[380px]">
+      <div className="w-[430px] mt-0 max-[450px]:w-[270px] m-auto   relative h-[450px] max-[450px]:h-[380px]">
         <div className="   flex flex-col justify-start  items-end max-[450px]:items-center ">
           <span
             data-aos="fade-right"
-            className=" absolute left-0 title2 text-[20rem] max-[450px]:left-[20%] max-[450px]:top-[-220px] top-[-120px]  "
+            data-text="3"
+            className=" three absolute left-0 title2 text-[20rem] max-[450px]:left-[20%] max-[450px]:top-[-220px] top-[-120px]  "
           >
             3
           </span>

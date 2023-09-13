@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Home/Header";
 import Content from "@/components/Home/content/Content";
-import Footer from "@/components/footer/Footer";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PopUp from "@/components/Home/content/PopUp";
@@ -15,11 +15,10 @@ export default function Home() {
     });
   }, []);
   return (
-    <main className=" max-w-[1500px] m-auto ">
-      <Header />
+    <div className=" ">
+      {/* <Header /> */}
       <Content />
       {/* <PopUp /> */}
-      <Footer />
-    </main>
+    </div>
   );
 }

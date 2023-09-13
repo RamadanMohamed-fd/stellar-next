@@ -4,15 +4,15 @@ import image1 from "../../public/sq1.jpg";
 import image2 from "../../public/sq2.jpg";
 const Story = () => {
   return (
-    <div className="w-[85%] max-lg:w-[95%] max-sm:w-[90%] flex flex-wrap justify-evenly max-[845px]:justify-between items-center  m-auto my-20 text-white">
+    <div className="w-[85%] max-lg:w-[95%] max-sm:w-[90%] flex flex-wrap justify-evenly max-mdd:justify-between items-center  m-auto my-20 text-white">
       {/* <div className="w-full max-sm:w-[95%] m-auto flex items-center max-sm:items-start justify-evenly max-sm:flex-col-reverse  my-16 max-sm:mt-0 py-4 max-sm:py-0 "> */}
       <div
         data-aos="flip-left"
-        className="w-4/12 order-2 max-sm:w-full   max-[845px]:w-6/12   h-[400px] relative overflow-hidden cursor-pointer  rounded-xl"
+        className="w-4/12 order-2 max-sm:w-full story-img1  max-mdd:w-6/12   h-[400px] relative overflow-hidden cursor-pointer  rounded-xl"
       >
         <Image
           src={image1}
-          alt="about"
+          alt="story"
           placeholder="blur"
           loading="lazy"
           objectFit="cover"
@@ -22,11 +22,11 @@ const Story = () => {
       </div>
       <div
         data-aos="flip-right"
-        className=" relative w-7/12 order-1 max-[845px]:w-full max-[845px]:mb-8 max-sm:w-full h-[400px] overflow-hidden cursor-pointer rounded-xl"
+        className=" relative w-7/12 order-1 story-img2 max-mdd:w-full max-mdd:mb-8 max-sm:w-full h-[400px] overflow-hidden cursor-pointer rounded-xl"
       >
         <Image
           src={image2}
-          alt="about"
+          alt="story"
           placeholder="blur"
           loading="lazy"
           objectFit="cover"
@@ -35,15 +35,15 @@ const Story = () => {
         />
       </div>
       {/* </div> */}
-      <div className="w-4/12 max-[845px]:w-5/12 max-sm:w-full mt-10 order-3">
+      <div className="w-4/12 max-mdd:w-5/12 max-sm:w-full mt-10 order-3">
         <h2
           data-aos="fade-up-right"
-          className=" title1 text-8xl bg-transparent max-xl:text-7xl font-bold "
+          className=" title1 text-8xl bg-transparent max-xl:text-7xl  font-bold "
         >
           OUR STORY
         </h2>
       </div>
-      <div className="w-7/12 max-[845px]:w-full mt-10 order-4 max-sm:mt-6">
+      <div className="w-7/12 story-text  mt-10 order-4 max-sm:mt-6">
         <p
           data-aos="fade-up-left"
           className="text-2xl max-xl:text-xl max-lg:text-lg max-sm:text-base"

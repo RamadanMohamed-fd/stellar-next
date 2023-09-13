@@ -1,117 +1,99 @@
-import React, { useState } from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import "./header.modual.css";
 import { IoIosArrowDown } from "react-icons/io";
-import {
-  MdOutlineDesignServices,
-  MdOutlinePermContactCalendar,
-} from "react-icons/md";
-import { GiNetworkBars } from "react-icons/gi";
-import { CgComment } from "react-icons/cg";
-import { BiDonateHeart } from "react-icons/bi";
-import { LiaHandsHelpingSolid, LiaPhoneVolumeSolid } from "react-icons/lia";
+import { VscTriangleUp } from "react-icons/vsc";
+import Bar from "./Bar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  useEffect(() => {
+    AOS.init({
+      offset: 120,
+      duration: 1200,
+      delay: 0,
+    });
+  }, []);
+
   return (
-    <div className="  text-white h-[130px] max-sm:overflow-hidden   flexCenter  m-auto w-full   lg:uppercase font-semibold capitalize text-xs max-lg:text-base max-sm:text-sm  max-lg:font-normal  ">
-      <nav className="w-[95%] max-sm:w-[100%]  m-auto relative  z-40  ">
-        <ul className="flexBetween ">
+    <div className="  text-white h-[130px] relative z-20   flexCenter  m-auto w-full    font-semibold capitalize text-xs    ">
+      <nav className="w-[95%]   m-auto  ">
+        <ul className="flexBetween max">
           <li
             data-aos="fade-down-right"
-            className={` lg:italic li-menu w-[40%] duration-300   ${
-              openMenu ? "max-lg:scale-100" : "max-lg:scale-0"
-            }`}
+            className={` lg:italic li-menu w-[40%]  duration-300   `}
           >
             <ul
-              className=" flex menu justify-evenly  flex-wrap items-center
-              max-lg:bg-[#222] max-lg:bottom-0 max-lg:border-2 max-lg:border-b-0 max-lg:border-gray-500  rounded-t-2xl  "
+              className={` flex menu justify-evenly max-lg:w-full uppercase flex-wrap items-center max-lg:hidden`}
             >
               <li className="max-lg:py-2 ">
                 <Link href="/about">
-                  <p className="flexCenter ">
-                    <BiDonateHeart className=" ml-1 lg:hidden " />
-                    About
-                  </p>
+                  <p className="flexCenter ">About</p>
                 </Link>
               </li>
               <li className="max-lg:py-2 cursor-pointer flex  max-lg:flex-col max-lg:items-start relative  group head-li ">
                 <p className="  flexCenter">
-                  <MdOutlineDesignServices className=" mr-1 lg:hidden group-hover:text-yellow-500  text-white " />
                   Services
                   <IoIosArrowDown className=" ml-1 group-hover:rotate-180    duration-300" />
                 </p>
-                <div className="   absolute z-20 lg:top-4 max-lg:bottom-10 lg:-left-2  max-sm:left-[-45%]   movup  ">
-                  <span className="triangle-up "></span>
-                  <ul className="    duration-300 p-4  text-sm  lg:mt-4  font-normal not-italic border-h relative rounded-lg max-lg:border-t-2    max-lg:border-gray-500   bg-[#222]  min-w-[245px]  capitalize  ">
+                <div className="   absolute z-20 top-10  lg:-left-2    movup  ">
+                  <ul className="  duration-300 p-4  text-sm    font-normal not-italic border-h bg-black min-w-[245px]  capitalize  ">
                     <li className="service-list">
                       <span></span>
-                      <Link href="">Marketing Consulting</Link>
+                      <Link href="/marketing">Marketing Consulting</Link>
                     </li>
                     <li className="service-list">
                       <span></span>
-                      <Link href="">Brand Development</Link>
+                      <Link href="/brand">Brand Development</Link>
                     </li>
                     <li className="service-list">
                       <span></span>
-                      <Link href="">Video Production </Link>
+                      <Link href="/video">Video Production </Link>
                     </li>
                     <li className="service-list">
                       <span></span>
-                      <Link href="">Photography</Link>
+                      <Link href="/photography">Photography</Link>
                     </li>
                     <li className="service-list">
                       <span></span>
-                      <Link href="">Social Media Management </Link>
+                      <Link href="/social">Social Media Management </Link>
                     </li>
                     <li className="service-list">
                       <span></span>
-                      <Link href="">Digital Marketing</Link>
+                      <Link href="/digitalMarketing">Digital Marketing</Link>
                     </li>
                     <li className="service-list">
                       <span></span>
-                      <Link href="">E-Commerce</Link>
+                      <Link href="/e-commerce">E-Commerce</Link>
                     </li>
                   </ul>
                 </div>
               </li>
-              <li className="max-lg:py-2 ">
-                <Link href="">
-                  <p className="flexCenter ">
-                    <GiNetworkBars className=" mr-1 lg:hidden " />
-                    Careers
-                  </p>
+              <li className=" ">
+                <Link href="/socialAlgorithms">
+                  <p className="flexCenter ">Careers</p>
                 </Link>
               </li>
-              <li className="max-lg:py-2 ">
+              <li className=" ">
                 <Link href="">
-                  <p className="flexCenter ">
-                    <CgComment className=" mr-1 lg:hidden " />
-                    community
-                  </p>
+                  <p className="flexCenter ">community</p>
                 </Link>
               </li>
-              <li className="max-lg:py-2 ">
-                <Link href="">
-                  <p className="flexCenter ">
-                    <MdOutlinePermContactCalendar className=" mr-1 lg:hidden " />
-                    portfolio
-                  </p>
+              <li className=" ">
+                <Link href="/portfolio">
+                  <p className="flexCenter ">portfolio</p>
                 </Link>
               </li>
-              <li className="sm:hidden max-lg:py-2">
-                <Link href="">
-                  <p className="flexCenter ">
-                    <LiaHandsHelpingSolid className=" mr-1 lg:hidden " />
-                    How We Help
-                  </p>
+              <li className="sm:hidden ">
+                <Link href="/">
+                  <p className="flexCenter ">How We Help</p>
                 </Link>
               </li>
-              <li className="sm:hidden max-lg:py-2 ">
+              <li className="sm:hidden  ">
                 <Link href="">
-                  <p className="flexCenter ">
-                    <LiaPhoneVolumeSolid className=" mr-1 lg:hidden  " />
-                    contect
-                  </p>
+                  <p className="flexCenter ">contect</p>
                 </Link>
               </li>
             </ul>
@@ -175,20 +157,20 @@ const Header = () => {
           </li>
           <li
             data-aos="fade-down-left"
-            className="w-[35%]  max-lg:w-[80%] max-sm:w-fit mr-3 "
+            className="w-[35%]  max-lg:w-[390px]  max-sm:w-[100px] mr-3 -ml-3 "
           >
-            <ul className="flex  justify-start  max-lg:justify-end   items-center  text-black">
+            <ul className="flex  justify-start   items-center  max-lg:justify-start max-lg:w-full text-black">
               <li className="w-fit  max-lg:w-72 max-sm:hidden">
                 <ul className=" flex justify-end  text-sm max-sm:flex-col">
-                  <Link href="">
+                  <Link href="/">
                     {" "}
-                    <li className="   bg-yellow-500 font-medium mr-4 px-4 py-[6px] -skew-x-12 hover:text-white duration-300">
+                    <li className="   bg-yellow-500 hover:bg-yellow-600 font-medium mr-4 px-4 py-[6px] -skew-x-12 hover:text-white duration-300">
                       How We Help
                     </li>
                   </Link>
                   <Link href="">
                     {" "}
-                    <li className="  bg-yellow-500  mr-4 px-4 font-medium py-[6px] -skew-x-12 hover:text-white duration-300">
+                    <li className="  bg-yellow-500 hover:bg-yellow-600 mr-4 px-4 font-medium py-[6px] -skew-x-12 hover:text-white duration-300">
                       contect
                     </li>
                   </Link>
@@ -196,7 +178,7 @@ const Header = () => {
               </li>
 
               <li className="w-fit   max-lg:w-14  text-sm hover:text-white  cursor-pointer group">
-                <p className=" bg-yellow-500 font-medium w-fit px-4 py-[6px] duration-300 -skew-x-12  ">
+                <p className=" bg-yellow-500 hover:bg-yellow-600 font-medium w-fit px-4 py-[6px] duration-300 -skew-x-12  ">
                   En
                 </p>
                 <div className=" group-hover:scale-100 scale-0 duration-300 relative ">
@@ -214,7 +196,7 @@ const Header = () => {
                 </div>
               </li>
               <li className="lg:hidden max-lg:w-fit mt-1 ">
-                <div className="bar " onClick={() => setOpenMenu(!openMenu)}>
+                <div className="bar" onClick={() => setOpenMenu(!openMenu)}>
                   <div className={`${openMenu ? "open-menu" : ""}`}>
                     <span className="line-1"></span>
                     <span className="line-2"></span>
@@ -226,6 +208,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <Bar open={openMenu} />
     </div>
   );
 };
