@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import image from "../../public/proposal/14.jpg";
+const m =
+  "Our team of experts will conduct a comprehensive analysis of your social media presence, leaving no stone unturned. We'll examine your profiles across various platforms, evaluate your content strategy, assess engagement levels, and scrutinize your competitor's activities";
+const mm = "UNLOCK THE POWER OF DATA:";
 const Boostl = () => {
   return (
     <div className=" w-full   flex justify-start ">
@@ -28,17 +31,13 @@ const Boostl = () => {
               data-aos="fade-down-left"
               className=" text-5xl max-lg:text-4xl max-md:text-3xl max-[360px]:text-2xl title2 font-bold"
             >
-              UNLOCK THE POWER OF DATA:
+              {mm}
             </p>
             <p
               data-aos="fade-up-left"
               className="text-2xl max-lg:text-xl max-md:text-lg max-sm:text-base"
             >
-              Our team of experts will conduct a comprehensive analysis of your
-              social media presence, leaving no stone unturned. We'll examine
-              your profiles across various platforms, evaluate your content
-              strategy, assess engagement levels, and scrutinize your
-              competitor's activities
+              {m}
             </p>
           </div>
         </div>

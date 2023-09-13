@@ -33,7 +33,7 @@ const PopUp = ({ data, click, close }) => {
                     {ele.mainHead}
                   </p>
                   {ele.content.map((e, index) => (
-                    <div className="flex ">
+                    <div className="flex " key={index * 0.897}>
                       <span
                         className={`inline mt-2 animate-pulse  text-yellow-700  duration-500`}
                       >

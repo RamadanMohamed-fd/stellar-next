@@ -15,6 +15,7 @@ const RoundedText = ({ explor }) => {
           <p>
             {explor.split("").map((ele, i) => (
               <span
+                key={i * 9.65}
                 style={{
                   transform: `rotate(${18 * i}deg)`,
                 }}

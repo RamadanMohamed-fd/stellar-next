@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import image from "@/public/proposal/14.jpg";
+const c = '"';
+const cc = "!”";
 const Proposal = () => {
   return (
     <div className="w-[90%]  mr-[-135px] max-xl:m-auto max-xl:w-[95%] max-mdd:w-[90%] max-xs:w-[90%] my-10 max-sm:mt-0 flexBetween max-mdd:flex-col ">
@@ -16,12 +18,11 @@ const Proposal = () => {
           className="text-5xl max-lg:text-4xl max-xs:text-2xl"
         >
           <span className="text-6xl max-lg:text-5xl title1 max-xs:text-3xl font-bold">
-            "Unleashing the Power
+            {c}Unleashing the Power
           </span>
           of Social Algorithms: Mastering Controlled
           <span className="text-5xl max-lg:text-4xl max-xs:text-3xl title1 font-bold">
-            {" "}
-            Virality! ”
+            Virality {cc}
           </span>
         </p>
       </div>

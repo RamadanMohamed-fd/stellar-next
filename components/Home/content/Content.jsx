@@ -49,6 +49,7 @@ const Content = () => {
                   src={data[0].image}
                   width={"200"}
                   height={"100"}
+                  alt="content"
                   className="  rounded-sm bg-white w-[200px] h-[70px] "
                 />
                 <div className="my-4">

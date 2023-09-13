@@ -3,6 +3,9 @@ import Image from "next/image";
 import image1 from "../../public/sq1.jpg";
 import image2 from "../../public/sq2.jpg";
 import { FiArrowRight } from "react-icons/fi";
+const m = "Don't miss";
+const mm =
+  "   out on this opportunity to supercharge your social media presence. Claim your free audit now and unleash your brand's true potential!";
 const GetFree = () => {
   return (
     <div
@@ -50,10 +53,9 @@ const GetFree = () => {
       <div className=" w-6/12 max-lg:w-full max-lg:mt-10  max-sm:px-0 px-10 ">
         <p className="text-4xl max-sm:text-3xl max-[450px]:text-2xl">
           <span className="title2 font-bold text-5xl max-sm:text-4xl ">
-            Don't miss
+            {m}
           </span>{" "}
-          out on this opportunity to supercharge your social media presence.
-          Claim your free audit now and unleash your brand's true potential!
+          {mm}
         </p>
         <div className="w-full my-8 text-center cursor-pointer group duration-500">
           <span
