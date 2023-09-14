@@ -84,7 +84,7 @@ const Bar = ({ open }) => {
           </Link>
         </li>
         <li className="py-2 ">
-          <Link href="">
+          <Link href="/portfolio">
             <p className="flexCenter ">
               <MdOutlinePermContactCalendar className=" mr-1  " />
               portfolio
