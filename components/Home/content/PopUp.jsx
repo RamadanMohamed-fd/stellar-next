@@ -15,7 +15,7 @@ const PopUp = ({ data, click, close }) => {
             {data.mainHead}
           </h2>
           <div
-            className=" text-2xl absolute top-5 right-5 cursor-pointer text-white hover:text-red-600 duration-300 "
+            className=" text-2xl absolute top-5 right-5 cursor-pointer text-white hover:text-red-500 duration-300 "
             onClick={() => close()}
           >
             <BsBackspaceReverse />
