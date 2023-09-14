@@ -168,7 +168,7 @@ const Header = () => {
                       How We Help
                     </li>
                   </Link>
-                  <Link href="">
+                  <Link href="/contact">
                     {" "}
                     <li className="  bg-yellow-500 hover:bg-yellow-600 mr-4 px-4 font-medium py-[6px] -skew-x-12 hover:text-white duration-300">
                       contect

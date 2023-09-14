@@ -100,7 +100,7 @@ const Bar = ({ open }) => {
           </Link>
         </li>
         <li className="sm:hidden py-2 ">
-          <Link href="">
+          <Link href="/contact">
             <p className="flexCenter ">
               <LiaPhoneVolumeSolid className=" mr-1   " />
               contect

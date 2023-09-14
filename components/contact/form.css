@@ -1,0 +1,51 @@
+.react-tel-input .form-control {
+  position: relative;
+  font-size: 16px;
+  letter-spacing: 0.01rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 48px;
+  margin-left: 0;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 0px;
+  line-height: 25px;
+  height: 49px !important;
+  width: 100%;
+  outline: none;
+}
+.react-tel-input .country-list {
+  margin: 1.5px 0 10px -1px;
+}
+.react-tel-input .country-list .country.highlight {
+  background-color: #ffeb3b;
+}
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: transparent !important;
+  border-radius: 3px 0 0 0;
+}
+.react-tel-input .country-list .country .dial-code {
+  color: #0393d6;
+}
+.country-name {
+  color: #03a9f4;
+}
+
+.react-tel-input .country-list .country {
+  padding: 7px 9px;
+  background: rgba(1, 1, 1, 0.9);
+}
+
+input:focus ~ label,
+textarea:focus ~ label,
+.pi:focus ~ label,
+input:valid ~ label,
+.pi:valid ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -40px;
+  font-size: 15px;
+  margin-left: -10px;
+}
+label {
+  transition: 0.3s;
+}
