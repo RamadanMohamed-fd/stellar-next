@@ -1,20 +1,21 @@
 "use client";
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useEffect, useState } from "react";
+import Loading from "../Loading";
 import Marketing from "@/components/marketing/Marketing";
+
 const Service = (props) => {
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    AOS.init({
-      offset: 120,
-      duration: 1200,
-      delay: 0,
-    });
+    const timer = setTimeout(() => {
+      setLoading(true);
+    }, 1);
+    return () => clearTimeout(timer);
   }, []);
   return (
     <div className=" relative z-10 max-w-[1500px] m-auto ">
-      <Marketing params={props.params.services} />
+      {loading ? <Marketing params={props.params.services} /> : <Loading />}
     </div>
   );
 };
+
 export default Service;

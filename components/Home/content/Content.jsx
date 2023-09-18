@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./content.modules.css";
 import { data } from "../content/ContentData";
 import Image from "next/image";
 import { GiSpiralArrow } from "react-icons/gi";
 import Link from "next/link";
 import PopUp from "./PopUp";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Content = () => {
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
@@ -14,6 +17,13 @@ const Content = () => {
   const closePopUp = () => {
     setOpen(false);
   };
+  useEffect(() => {
+    AOS.init({
+      offset: 120,
+      duration: 1200,
+      delay: 0,
+    });
+  }, []);
   return (
     <div className="relative z-10 overflow-hidden text-white w-[100%] m-auto ">
       <div className="w-full text-center flexCenter flex-col italic mt-24 mb-16 ">
